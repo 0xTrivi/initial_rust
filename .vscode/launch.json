@@ -1,0 +1,45 @@
+{
+    // Use IntelliSense para saber los atributos posibles.
+    // Mantenga el puntero para ver las descripciones de los existentes atributos.
+    // Para más información, visite: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'platzi-curso'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=platzi-curso",
+                    "--package=platzi-curso"
+                ],
+                "filter": {
+                    "name": "platzi-curso",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'platzi-curso'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=platzi-curso",
+                    "--package=platzi-curso"
+                ],
+                "filter": {
+                    "name": "platzi-curso",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
